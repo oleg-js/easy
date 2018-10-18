@@ -19,6 +19,7 @@
 			color: green;
 			font-family: monospace;
 			font-style: Andale Mono;
+			perspective: 500px;
 		}
 	</style>
 	<script>
@@ -27,8 +28,8 @@
 		int = setInterval(function() {
 			var b = document.createElement('font');
 			b.type = 'submit';
-			b.style.top = '-20px';
-			fs = Math.round(Math.random() * 20) + 5;
+			b.style.top = '-50px';
+			fs = Math.round(Math.random() * 30) + 5;
 			b.style.fontSize = fs + 'px';
 			b.innerHTML = Math.round(Math.random());
 			b.style.position = 'fixed';
