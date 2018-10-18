@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matrix</title>
+</head>
+<body>
+	<style>
+		body {
+			background: black;
+			color: green;
+		}
+		input {
+			border: 0px;
+			background: none;
+			color: green;
+		}
+	</style>
+	<script>
+		arr = [];
+		arr2 = [];
+		int = setInterval(function() {
+			var b = document.createElement('input');
+			b.type = 'submit';
+			b.style.top = '-20px';
+			fs = Math.round(Math.random() * 20) + 5;
+			b.style.fontSize = fs + 'px';
+			b.value = Math.round(Math.random());
+			b.style.position = 'fixed';
+			b.style.left = Math.random() * window.screen.width + 'px';
+			document.body.appendChild(b);
+			arr.push(b);
+			arr2.push(fs / 5);
+			
+			for (var i = 0; i < arr.length; i++ ) {
+				if (arr[i].style.top = Number(arr[i].style.top.substring(0, arr[i].style.top.length - 2)) > 1100) {
+					document.body.removeChild(arr[i]);
+					arr.splice(i, 1);
+					arr2.splice(i, 1);
+				} else {
+					arr[i].style.top = Number(arr[i].style.top.substring(0, arr[i].style.top.length - 2)) + arr2[i] + 'px';
+				}
+			}
+		}, 30);
+	</script>
+</body>
+</html>
