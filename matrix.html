@@ -5,28 +5,32 @@
 </head>
 <body>
 	<style>
-		html, body {
+		body {
 			background: black;
 			color: green;
-			cursor: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
-		input {
-			border: 0px;
-			background: none;
+		font {
 			color: green;
-			cursor: none;
+			font-family: monospace;
+			font-style: Andale Mono;
 		}
 	</style>
 	<script>
 		arr = [];
 		arr2 = [];
 		int = setInterval(function() {
-			var b = document.createElement('input');
+			var b = document.createElement('font');
 			b.type = 'submit';
 			b.style.top = '-20px';
 			fs = Math.round(Math.random() * 20) + 5;
 			b.style.fontSize = fs + 'px';
-			b.value = Math.round(Math.random());
+			b.innerHTML = Math.round(Math.random());
 			b.style.position = 'fixed';
 			b.style.left = Math.random() * window.screen.width + 'px';
 			document.body.appendChild(b);
